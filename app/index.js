@@ -1,6 +1,7 @@
 import { Text, View, TextInput, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import logoId from "../assets/logoID.png"
 import { useRouter } from 'expo-router';
+import { Stack } from 'expo-router';
 
 export default function Index(){
   
@@ -8,6 +9,7 @@ const router = useRouter();
 
   return(
     <View style={styles.container}>
+      <Stack.Screen options={{headerShown: false}} />
       <Image style={styles.logoId} source={logoId}/>
        <TextInput keyboardType="email-address" style={styles.input} placeholder="Coloque aqui seu RA" placeholderTextColor= 'gray'/>
        <TextInput  secureTextEntry={true} style={styles.input} placeholder="Coloque aqui sua senha" placeholderTextColor= 'gray'/>

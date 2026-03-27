@@ -33,9 +33,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 20,
     borderColor: 'white',
-    margin: 10,
+    margin: 6,
     marginBottom: 30,
-    width: '90%'
+    width: '90%',
+    height: '40%',
   },
 
   linha:{

@@ -1,32 +1,47 @@
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import ContainerHome from "../src/components/containerHome";
 import catracaID from "../assets/catracaID.png";
-import carteirinhaID from "../assets/carteirinhaID.png"
+import carteirinhaID from "../assets/carteirinhaID.png";
 import ContainerAnotacao from '../src/components/containerAnotacao';
+import { useRouter } from "expo-router";
+import BarraBar from "../src/componentsGeral/barraBar";
+import TopoAluno from "../src/componentsGeral/topoAluno";
+import { Stack } from "expo-router";
 
 export default function Home(){
+
+  const router = useRouter();  
+
   return(
-    <ScrollView 
-      style={styles.container}
-      contentContainerStyle={styles.content}
-    >
-      <ContainerHome 
-        imagemContainer={carteirinhaID} 
-        textoContainer='Acesse Sua' 
-        primeiraLinha='Carteira De' 
-        segundaLinha='Estudante'
-      />
+    <View style={{ flex: 1 }}>
+      <Stack.Screen options={{headerShown: false}} />
+      <TopoAluno/>  
 
-      <ContainerHome 
-        imagemContainer={catracaID} 
-        textoContainer='Registro De' 
-        primeiraLinha='Entrada E' 
-        segundaLinha='Saída'
-      />
+      <ScrollView 
+        style={styles.container}
+        contentContainerStyle={styles.content}
+      >
+        <ContainerHome 
+          imagemContainer={carteirinhaID} 
+          textoContainer='Acesse Sua' 
+          primeiraLinha='Carteira De' 
+          segundaLinha='Estudante'
+          rota='/carterinhaAluno'
+        />
 
-      <ContainerAnotacao/>
+        <ContainerHome 
+          imagemContainer={catracaID} 
+          textoContainer="Registro de"
+          primeiraLinha="Entrada E" 
+          segundaLinha="Saída"
+          rota='/registroEntradaSaida'
+        />
 
-    </ScrollView>
+        <ContainerAnotacao/>
+      </ScrollView>
+
+      <BarraBar/>
+    </View>
   )
 }
 
@@ -39,6 +54,6 @@ const styles = StyleSheet.create({
   content: {
     paddingVertical: 20,
     alignItems: 'center',
-    justifyContent: 'center'
+    paddingBottom: 80
   }
-})
+});

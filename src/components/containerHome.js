@@ -1,6 +1,10 @@
 import { Text, Image, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { useRouter } from 'expo-router';
 
-function ContainerHome({ imagemContainer, textoContainer, primeiraLinha, segundaLinha }) {
+export default function ContainerHome({ imagemContainer, textoContainer, primeiraLinha, segundaLinha, rota }) {
+
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
       <Image 
@@ -20,7 +24,7 @@ function ContainerHome({ imagemContainer, textoContainer, primeiraLinha, segunda
         {segundaLinha}
       </Text>
 
-      <TouchableOpacity style={styles.botao}>
+      <TouchableOpacity style={styles.botao} onPress={() => router.replace(rota)}>
         <Text style={{color: 'white', fontFamily: 'arial,', fontSize: 20, fontWeight: 'bold', textAlign: 'center'}}>
           Acessar
         </Text>
@@ -74,5 +78,3 @@ const styles = StyleSheet.create({
 
   }
 });
-
-export default ContainerHome;

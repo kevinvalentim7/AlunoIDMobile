@@ -3,10 +3,14 @@ import DadosPessoais from "../src/componentsUser/dadosPessoais"
 import EnderecoContato from '../src/componentsUser/enderecoContato';
 import BarraBar from '../src/componentsGeral/barraBar';
 import TopoAluno from "../src/componentsGeral/topoAluno";
+import { Stack } from 'expo-router';
 
 export default function DadosAluno(){
   return(
+    <View style={{ flex: 1 }}>
+      <TopoAluno />
     <View style={styles.container}>
+      <Stack.Screen options={{headerShown: false}} />
       <DadosPessoais/>
       <EnderecoContato/>
 
@@ -15,7 +19,8 @@ export default function DadosAluno(){
           Finalizar Sessão
         </Text>
       </TouchableOpacity>
-
+    </View>
+    <BarraBar/>
     </View>
   )
 }

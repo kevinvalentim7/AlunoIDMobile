@@ -4,10 +4,16 @@ import { useState } from "react";
 
 export default function CarteirinhaAluno({nome, escola, cpf, ra, dataNasc}){
 
+  cpf = 98798798798
+  ra = 123456789
+  dataNasc = "01/01/2000"
+  nome = "Kevin Valentim"
+  escola = "Escola Estadual de Ensino Médio"
+
   return(
     <View style={styles.container}>
       <View style={styles.box1}>
-        <Image style={{width: "30%", height: 30, top: -10}} source={logoID}/>
+        <Image style={{width: "40%", height: 45, top: -25}} source={logoID}/>
         <View style={{top: -5, left: 50}}>
           <Text style={styles.textoContainer}>{nome}</Text>
           <Text style={styles.textoContainer}>{escola}</Text>
@@ -33,7 +39,7 @@ const styles = StyleSheet.create({
   },
   box1:{
     backgroundColor: '#31556E',
-    height: "45%",
+    height: "35%",
     width: "90%",
     borderWidth: 1,
     borderRadius: 20,

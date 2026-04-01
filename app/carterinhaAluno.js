@@ -1,16 +1,18 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 import logoID from "../assets/logoID.png"
 import { useState } from "react";
+import BarraBar from "../src/componentsGeral/barraBar";
+import TopoAluno from "../src/componentsGeral/topoAluno"; 
+import { Stack } from "expo-router";
 
 export default function CarteirinhaAluno({nome, escola, cpf, ra, dataNasc}){
 
-  cpf = 98798798798
-  ra = 123456789
-  dataNasc = "01/01/2000"
-  nome = "Kevin Valentim"
-  escola = "Escola Estadual de Ensino Médio"
+
 
   return(
+    <View style={{flex: 1}}>
+    <TopoAluno/>
+    <Stack.Screen options={{headerShown: false}} />
     <View style={styles.container}>
       <View style={styles.box1}>
         <Image style={{width: "40%", height: 45, top: -25}} source={logoID}/>
@@ -28,6 +30,8 @@ export default function CarteirinhaAluno({nome, escola, cpf, ra, dataNasc}){
       <View style={styles.box1}>
             <Text style={[styles.textoContainer, {top: -60, left: -95, fontSize: 25}]}>QR Code:</Text>
       </View>
+      </View>
+      <BarraBar/>
     </View> 
   )
 }

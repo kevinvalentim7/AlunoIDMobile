@@ -26,7 +26,7 @@ export default function BarraBar(){
         <Text style={styles.estiloTexto}>Agenda</Text>
       </TouchableOpacity>
     </View>
-  )
+  ) 
 }
 
 const styles = StyleSheet.create({
@@ -35,9 +35,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 10,
     justifyContent: 'center',
-    gap: 40,
+    gap: 45,
     borderTopWidth: 2,
-    width: '100%'
+    width: '100%',
+    height: 75
   },
   botao:{
     alignItems: 'center',

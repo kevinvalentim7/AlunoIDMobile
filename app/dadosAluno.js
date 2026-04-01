@@ -8,9 +8,10 @@ import { Stack } from 'expo-router';
 export default function DadosAluno(){
   return(
     <View style={{ flex: 1 }}>
+      <Stack.Screen options={{headerShown: false}} />
       <TopoAluno />
     <View style={styles.container}>
-      <Stack.Screen options={{headerShown: false}} />
+      
       <DadosPessoais/>
       <EnderecoContato/>
 

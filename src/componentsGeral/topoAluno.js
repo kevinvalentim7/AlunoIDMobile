@@ -8,8 +8,6 @@ export default function TopoAluno(){
   const router = useRouter();
 
   return(
-    <View style={{top: 50 }}>
-
       <View style={styles.container}>
         <Image 
           source={logoID} 
@@ -20,18 +18,16 @@ export default function TopoAluno(){
           <Image source={avatar} style={styles.estiloAvatar} />
         </TouchableOpacity>
       </View>
-    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container:{
     width: '100%',
-    height: 110,
+    height: 90,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    marginBottom: 20,
     flexDirection: 'row',
   },
 

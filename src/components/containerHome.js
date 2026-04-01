@@ -9,7 +9,7 @@ export default function ContainerHome({ imagemContainer, textoContainer, primeir
     <View style={styles.container}>
       <Image 
         source={imagemContainer}
-        style={{marginLeft: 10, width: 110, height: 60}}
+        style={{marginLeft: 10, width: 110, height: 60, resizeMode: 'cover'}}
       />
 
       <Text style={styles.corTitulo}>

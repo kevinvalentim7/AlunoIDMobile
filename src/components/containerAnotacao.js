@@ -4,11 +4,19 @@ export default function ContainerAnotacao({primeiroInput, segundoInput, terceiro
   return(
     <View style={styles.container}>
       <Text style={{color: 'black', fontSize: 'arial', fontSize: 25, color: '#5AA6A8', marginBottom: 15}}>Anotações:</Text>
-      <TouchableOpacity style={styles.textoBotao}>Adicione Anotações</TouchableOpacity>
+      <TouchableOpacity style={styles.textoBotao}>
+        <Text style={styles.textoBotao}>  
+          Adicionar Anotação
+        </Text>
+      </TouchableOpacity>
       <Text style={styles.textoInput}>{primeiroInput}</Text>
       <Text style={styles.textoInput}>{segundoInput}</Text>
       <Text style={styles.textoInput}>{terceiroInput}</Text>
-      <TouchableOpacity style={styles.textoBotao}>Ver Outras Anotações</TouchableOpacity>
+      <TouchableOpacity style={styles.textoBotao}>
+        <Text style={styles.textoBotao}>  
+          Ver Outras Anotações
+        </Text>
+      </TouchableOpacity>
     </View>
   )
 }
